@@ -1,3 +1,15 @@
+// Initialize Firebase(2)
+var config = {
+  apiKey: 'YOUR-API-KEY',
+  authDomain: 'YOUR-AUTH-DOMAIN',
+  databaseURL: 'YOUR-DATABASE-URL',
+  projectId: 'YOUR-PROJECT-ID',
+  storageBucket: 'YOUR-STORE-BUCKET',
+  messagingSenderId: 'YOUR-MESSAGING-SENDER-ID'
+};
+firebase.initializeApp(config);
+
+
 // Only one form, so no specific name required
 const form = document.querySelector("form");
 
