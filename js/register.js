@@ -17,7 +17,7 @@ const form = document.querySelector("form");
 form.setAttribute("novalidate", true);
 
 // Validate the field
-const hasError = field => {
+const hasError = (field) => {
   // Don't validate submits, buttons, and file inputs, and disabled fields
   if (
     field.disabled ||
@@ -155,7 +155,7 @@ const showError = (field, error) => {
 };
 
 // Remove the error message
-const removeError = field => {
+const removeError = (field) => {
   // Remove error class to field
   field.classList.remove("error");
 
@@ -192,7 +192,7 @@ const removeError = field => {
 // Listen to all blur events
 document.addEventListener(
   "blur",
-  function(event) {
+  function (event) {
     // Validate the field
     const error = hasError(event.target);
 
@@ -207,13 +207,39 @@ document.addEventListener(
   },
   true
 );
+var firebaseConfig = {
+  apiKey: "AIzaSyAfwDAtL1WGFNxPVGHeAiWcbEghVo0AjxE",
+  authDomain: "bona-fide-e6405.firebaseapp.com",
+  databaseURL: "https://bona-fide-e6405.firebaseio.com",
+  projectId: "bona-fide-e6405",
+  storageBucket: "bona-fide-e6405.appspot.com",
+  messagingSenderId: "1078457724723",
+  appId: "1:1078457724723:web:cac255c39e772ac46cd846",
+  measurementId: "G-8S58YSF0JX",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 // Check all fields on submit
 document.addEventListener(
   "submit",
-  function(event) {
+  function (event) {
     // Get all of the form elements
     const fields = event.target.elements;
+    // var uid = firebase.auth().currentUser.uid;
+    var database = firebase.database();
+    var ref = database.ref("scores/truth");
+    var data = {
+      Name: fields[0].value,
+      Email: fields[1].value,
+      Phone: fields[2].value,
+      Addess: fields[3].value,
+      DatePurchased: fields[4].value,
+      Country: fields[5].value,
+      ProductName: fields[6].value,
+      ProductDetails: fields[7].value,
+    };
+    ref.push(data);
 
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
