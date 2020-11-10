@@ -525,20 +525,19 @@ ol {
 }
 
 .work__gallery {
-  margin-right: -10px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .work__item {
   height: 311px !important;
-  width: calc(16.67% - 10px);
-  margin-right: 10px;
-  margin-bottom: 10px;
-  float: left;
+  width: 80% !important;
+  /* margin-right: 10px;
+  margin-bottom: 10px; */
   position: relative;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -554,7 +553,9 @@ ol {
   width: calc(33.33% - 10px);
 }
 .work__item.wide__item {
-  width: calc(33.33% - 10px);
+  position:relative;
+  align-items: center;
+  width: 80% !important;
   height: 311px !important;
 }
 .work__item .play-btn {
@@ -570,7 +571,7 @@ ol {
 }
 
 .grid-sizer {
-  width: calc(16.67% - 10px);
+  /* width: calc(16.67% - 10px); */
 }
 
 .work__item__hover {
@@ -709,7 +710,7 @@ ol {
 .section-title.team__title {
   margin-bottom: 90px;
 }
-
+.top-buffer { margin-top:20px; }
 .team__item {
   height: 390px;
   position: relative;
