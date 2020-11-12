@@ -214,7 +214,8 @@ document.addEventListener(
   function (event) {
     // Get all of the form elements
     const fields = event.target.elements;
-    // var uid = firebase.auth().currentUser.uid;
+    // // var uid = firebase.auth().currentUser.uid;
+    console.log(fields);
     var database = firebase.database();
     var ref = database.ref("scores/truth");
     var data = {

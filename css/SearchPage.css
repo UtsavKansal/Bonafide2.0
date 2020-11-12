@@ -4,6 +4,12 @@ body {
   background-color: #0f0f4b;
   font-size: 14px;
 }
+.link {
+  color: #ff0000;
+} /* CSS link color (red) */
+.link:hover {
+  color: #00ff00;
+} /* CSS link hover (green) */
 .search {
   width: 100%;
   position: relative;
@@ -95,6 +101,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: #d3d3d3;
 }
 .projcard-img {
   position: absolute;
@@ -131,8 +138,8 @@ body {
   content: "";
   position: absolute;
   display: block;
-  background: #ff0000bb;
-  background: #fff;
+
+  background: #d3d3d3;
   top: -20%;
   left: -55px;
   height: 140%;
@@ -256,6 +263,7 @@ body {
   height: 125px;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 100px;
 }
 .projcard-tagbox {
   position: absolute;
